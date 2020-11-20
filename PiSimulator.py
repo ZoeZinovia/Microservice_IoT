@@ -28,7 +28,7 @@ if isSimulation:
 else:
 	import adafruit_dht
 	import board
-	dht_device = adafruit_dht.DHT22(board.D12)
+	dht_device = adafruit_dht.DHT22(board.D32)
 
 while True:
 	body = []
