@@ -27,7 +27,8 @@ if isSimulation:
 		return random.random(), random.random()*100 #Python library to read the DHT series of humidity and temperature sensors on a Raspberry Pi or Beaglebone Black
 else:
 	import adafruit_dht
-	dht_device = adafruit_dht.DHT22(pin)
+	import board
+	dht_device = adafruit_dht.DHT22(board.D12)
 
 while True:
 	body = []
