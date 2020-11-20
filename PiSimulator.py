@@ -12,9 +12,7 @@ pin = 12
 #Access the CLODUAMQP_URL environment variable
 # url = os.environ.get("CLOUDAMQP_URL")
 params = pika.URLParameters("amqps://evwdjvwe:Lo9EpIkj1Z0teejABG64oO8UIIOhxyU8@jaguar.rmq.cloudamqp.com/evwdjvwe")  #Pika is a pure-Python implementation of the AMQP 0-9-1 protocol that tries to stay fairly independent of the underlying network support library.
-print("before issue")
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-print("after issue")
+connection = pika.BlockingConnection(params)
 
 #Start a channel
 channel = connection.channel()
