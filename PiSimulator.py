@@ -7,7 +7,7 @@ from datetime import datetime
 message_interval = 20
 reading_interval = 5
 sensor = 22
-pin = 12
+pin = 11
 
 #Access the CLODUAMQP_URL environment variable
 # url = os.environ.get("CLOUDAMQP_URL")
@@ -38,7 +38,7 @@ while True:
 			humidity, temperature = genrand()
 		else:
 			print("no simulation")
-			Adafruit_DHT.read_retry(sensor, pin)
+			humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 			print(humidity)
 			print(temperature)
 		read_time = datetime.now()
