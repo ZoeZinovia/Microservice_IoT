@@ -20,7 +20,7 @@ channel = connection.channel()
 #Declare a queue
 channel.queue_declare(queue="weather")
 
-isSimulation = 0
+isSimulation = 1
 if isSimulation:
 	import random
 	def genrand():
@@ -38,7 +38,6 @@ while True:
 			humidity, temperature = genrand()
 		else:
 			humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-
 		read_time = datetime.now()
 		d = {"t": str(read_time), "T": temperature, "H": humidity}
 		body.append(d)
