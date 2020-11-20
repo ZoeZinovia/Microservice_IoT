@@ -38,7 +38,7 @@ while True:
 			humidity, temperature = genrand()
 		else:
 			print("no simulation")
-			humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+			Adafruit_DHT.read_retry(sensor, pin)
 			print(humidity)
 			print(temperature)
 		read_time = datetime.now()
