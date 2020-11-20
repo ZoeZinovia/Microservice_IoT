@@ -7,7 +7,7 @@ from datetime import datetime
 message_interval = 20
 reading_interval = 5
 sensor = 22
-pin = 11
+pin = 12
 
 #Access the CLODUAMQP_URL environment variable
 # url = os.environ.get("CLOUDAMQP_URL")
