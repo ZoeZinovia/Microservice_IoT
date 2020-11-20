@@ -20,7 +20,7 @@ channel = connection.channel()
 #Declare a queue
 channel.queue_declare(queue="weather")
 
-isSimulation = 1
+isSimulation = 0
 if isSimulation:
 	import random
 	def genrand():
